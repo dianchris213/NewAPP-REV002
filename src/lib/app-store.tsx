@@ -132,6 +132,14 @@ export function AppProvider({ children }: { children: ReactNode }) {
     }
   }, [hydrated, user, transactions, settings]);
 
+  // Apply the theme switch to the document so the toggle is visually real.
+  useEffect(() => {
+    if (!hydrated) return;
+    const root = document.documentElement;
+    root.classList.toggle("theme-light", !settings.darkTheme);
+    root.classList.toggle("dark", settings.darkTheme);
+  }, [hydrated, settings.darkTheme]);
+
   const login = useCallback(async (provider: "telegram" | "google", name?: string) => {
     setAuthLoading(provider);
     await new Promise((r) => setTimeout(r, 1200));
