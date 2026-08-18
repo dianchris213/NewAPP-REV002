@@ -35,7 +35,7 @@ export function AddTransactionSheet() {
 
   const pickType = (next: TxType) => {
     setType(next);
-    setCategory(categories[next][0]);
+    setCategory(categories[next][0] ?? "Lainnya");
   };
 
   return (

@@ -62,7 +62,7 @@ function Analytics() {
         range.buckets - 1,
         Math.floor(((ts - start) / span) * range.buckets),
       );
-      buckets[idx] += t.amount;
+      buckets[idx] = (buckets[idx] ?? 0) + t.amount;
     }
 
     const byCategory = new Map<string, number>();
@@ -157,7 +157,7 @@ function Analytics() {
                 <div className="mt-2 h-1.5 w-full overflow-hidden rounded-full bg-surface-variant">
                   <div
                     className="gradient-primary h-full rounded-full transition-all duration-500"
-                    style={{ width: `${(value / data.categories[0][1]) * 100}%` }}
+                    style={{ width: `${(value / (data.categories[0]?.[1] || 1)) * 100}%` }}
                   />
                 </div>
               </div>
