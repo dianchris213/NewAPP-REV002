@@ -222,7 +222,9 @@ function SummaryPill({
         <Icon name={icon} className="text-[16px] sm:text-[18px]" fill={1} />
       </div>
       <div className="flex min-w-0 flex-col">
-        <span className="truncate text-label uppercase text-on-surface-variant/80">{label}</span>
+        <span className="text-[10px] font-semibold uppercase leading-tight tracking-wide text-on-surface-variant/80">
+          {label}
+        </span>
         <span
           className={`truncate text-[13px] font-semibold leading-tight sm:text-body ${
             tone === "success" ? "text-success" : "text-error"
