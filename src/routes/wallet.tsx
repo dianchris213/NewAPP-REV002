@@ -104,7 +104,7 @@ function Wallet() {
             <Icon name="filter_list" className="text-[18px]" />
           </span>
         </div>
-        <div className="mb-3 flex gap-2 overflow-x-auto no-scrollbar" role="group" aria-label="Filter aktivitas">
+        <div className="mb-3 flex gap-2 swipe-x" role="group" aria-label="Filter aktivitas">
           {filters.map((f) => (
             <button
               key={f}

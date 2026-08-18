@@ -106,7 +106,7 @@ export function AddTransactionSheet() {
         </div>
 
         <span className="text-label uppercase text-on-surface-variant">Kategori</span>
-        <div className="mt-2 mb-4 flex gap-2 overflow-x-auto no-scrollbar" role="group" aria-label="Kategori">
+        <div className="mt-2 mb-4 flex gap-2 swipe-x" role="group" aria-label="Kategori">
           {categories[type].map((c) => (
             <button
               key={c}
