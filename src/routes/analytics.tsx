@@ -80,7 +80,7 @@ function Analytics() {
   return (
     <AppShell topBar={<TopBar eyebrow="Ringkasan" title="Analitik" />}>
       <div
-        className="mb-stack-md flex gap-2 overflow-x-auto no-scrollbar"
+        className="mb-stack-md flex gap-2 swipe-x"
         role="tablist"
         aria-label="Rentang waktu"
       >
